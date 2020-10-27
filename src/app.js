@@ -89,7 +89,7 @@ app.post("/repositories/:id/like", (request, response) => {
   
   repositories[repositoryIndex].likes = upLike;
 
-  return response.status(200).json({message: "Thanks for your like!"});
+  return response.status(201).json( { likes : repositories[repositoryIndex].likes });
 });
 
 module.exports = app;
